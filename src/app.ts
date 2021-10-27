@@ -1,9 +1,9 @@
 import "dotenv/config";
 import express from "express";
-import { router } from "./routes"
+import { router } from "./routes";
 
-const app = express();
-
+const app = express()
+app.use(express.json())
 app.use(router)
 
 app.get("/github", (request, response) => {
